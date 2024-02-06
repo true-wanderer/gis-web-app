@@ -1,13 +1,21 @@
 // App.js
 // App.js
-// App.js
-import React from 'react';
+// App.j
+import React, { useState } from "react";
 import Map from './components/Map';
 
+import SearchBox from './components/SearchBox';
+
+
 const App = () => {
+  const [selectPosition, setSelectPosition] = useState(null);
   return (
     <div>
-      <Map />
+      <SearchBox selectPosition={selectPosition} setSelectPosition={setSelectPosition} />
+      <Map  selectPosition={selectPosition} />
+       
+
+       
     </div>
   );
 };
